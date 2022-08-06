@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { createProject, deleteProject, getProject, getProjects, updateProject } from "../controllers/projects.controller.js"
+import { createProject, deleteProject, getProject, getProjects, updateProject, getProjectTask } from "../controllers/projects.controller.js"
 
 const router = Router()
 
@@ -10,5 +10,6 @@ router.put("/projects/:id", updateProject)
 router.delete("/projects/:id", deleteProject)
 router.get("/projects/:id", getProject)
 
+router.get("/projects/:id/tasks", getProjectTask)
 
 export default router
